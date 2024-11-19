@@ -1,5 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactMeSection from "./components/ContactMeSection";
