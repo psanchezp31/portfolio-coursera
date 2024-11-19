@@ -50,14 +50,25 @@ const Header = () => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <nav>
-            <HStack
-              spacing={8}
+          <HStack
+            spacing={[4, 6, 8]}
+            display="flex"
+            justifyContent="space-between"
+            width="100%"
+          >
+            <Box
               display="flex"
-              justifyContent="space-between"
-              width="100%"
+              justifyContent={{base:"flex-end", lg:"space-between"}}
+              w="100%"
             >
-              <List display="flex" gap="4" styleType="none" m="0" p="0">
+              <List
+                display={{ base: "none", lg: "flex" }}
+                gap="4"
+                styleType="none"
+                m="0"
+                p="0"
+                alignItems="center"
+              >
                 {socials.map((social) => {
                   return (
                     <ListItem key={social.url}>
@@ -67,25 +78,21 @@ const Header = () => {
                     </ListItem>
                   );
                 })}
+              </List>
+              <List display="flex" gap="4" styleType="none" m="0" p="0">
                 <ListItem>
-                  <Button
-                    variant="plain"
-                    onClick={handleClick('projects')}
-                  >
+                  <Button variant="plain" onClick={handleClick("projects")}>
                     Projects
                   </Button>
                 </ListItem>
                 <ListItem>
-                  <Button
-                    variant="plain"
-                    onClick={handleClick('contactme')}
-                  >
+                  <Button variant="plain" onClick={handleClick("contactme")}>
                     Contact me
                   </Button>
                 </ListItem>
               </List>
-            </HStack>
-          </nav>
+            </Box>
+          </HStack>
         </HStack>
       </Box>
     </Box>
