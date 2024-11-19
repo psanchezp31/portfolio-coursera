@@ -8,7 +8,7 @@ import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 
 function App() {
-  document.title = "Paula Sanchez Portfolio"
+  document.title = "Paula Sánchez Portfolio";
 
   return (
     <ChakraProvider>
