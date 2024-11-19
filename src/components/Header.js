@@ -1,23 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, Link, List, ListItem, Button } from "@chakra-ui/react";
-
-const socials = [
-  {
-    icon: faEnvelope,
-    url: "paula.sanchez1031@gmail.com",
-  },
-  {
-    icon: faGithub,
-    url: "https://github.com/psanchezp31",
-  },
-  {
-    icon: faLinkedin,
-    url: "https://www.linkedin.com/in/paula-sanchez-10/",
-  },
-];
+import { socials } from "../utils/socials";
 
 const Header = () => {
   const handleClick = (anchor) => () => {
@@ -59,7 +43,7 @@ const Header = () => {
           >
             <Box
               display="flex"
-              justifyContent={{base:"flex-end", lg:"space-between"}}
+              justifyContent={{ base: "flex-end", lg: "space-between" }}
               w="100%"
             >
               <List

@@ -1,5 +1,7 @@
 import React from "react";
-import {Box, Flex} from "@chakra-ui/react";
+import { Box, Flex, Text, List, ListItem, Link } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { socials } from "../utils/socials";
 
 const Footer = () => {
   return (
@@ -13,8 +15,29 @@ const Footer = () => {
           alignItems="center"
           maxWidth="1024px"
           height={16}
+          flexDirection="column"
         >
-          <p>Pete • © 2022</p>
+          <Text align="center" fontSize="xs">
+            Made with 💗 by Paula Sánchez • © 2024
+          </Text>
+          <List
+            display={{ base: "flex", lg: "none" }}
+            gap="4"
+            styleType="none"
+            m="0"
+            p="0"
+            alignItems="center"
+          >
+            {socials.map((social) => {
+              return (
+                <ListItem key={social.url}>
+                  <Link href={social.url} isExternal>
+                    <FontAwesomeIcon icon={social.icon} />
+                  </Link>
+                </ListItem>
+              );
+            })}
+          </List>
         </Flex>
       </footer>
     </Box>
